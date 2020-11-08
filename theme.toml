@@ -1,0 +1,4 @@
+baseURL = "http://zach.oglesby.co/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-purity"

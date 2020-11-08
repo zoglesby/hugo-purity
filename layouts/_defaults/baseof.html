@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+  <body itemtype="http://schema.org/WebPage" class="home-template">
+    <div class="sidebar pure-u">
+        {{- partial "header.html" . -}}
+        {{- partial "footer.html" . -}}
+    </div>
+    <div class="pure-u-1 container">
+        {{- block "main" . }}{{- end }}
+    </div>
+
+  </body>
+</html>
