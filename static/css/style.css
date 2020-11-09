@@ -10,11 +10,11 @@
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
-    src:url('../fonts/pureBuster.eot');
-    src:url('../fonts/pureBuster.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/pureBuster.woff') format('woff'),
-        url('../fonts/pureBuster.ttf') format('truetype'),
-        url('../fonts/pureBuster.svg#icons') format('svg');
+    src:url('https://files.oglesby.co/fonts/pureBuster.eot');
+    src:url('https://files.oglesby.co/fonts/pureBuster.eot?#iefix') format('embedded-opentype'),
+        url('https://files.oglesby.co/fonts/pureBuster.woff') format('woff'),
+        url('https://files.oglesby.co/fonts/pureBuster.ttf') format('truetype'),
+        url('https://files.oglesby.co/fonts/pureBuster.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }

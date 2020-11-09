@@ -8,11 +8,9 @@
     <meta name="description" content="My Site" />
     
     
-    <meta property="og:description" content="My Site" />
-    <meta property="og:title" content="My Site">
+    <meta property="og:description" content="{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}" />
+    <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}">
     
-
-    <link rel="shortcut icon" href="" />
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
