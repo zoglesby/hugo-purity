@@ -8,10 +8,9 @@
       {{ if isset .Params "description" }}
       {{ .Description }}
       {{ else }}
-      {{ .Summary }}…
+      {{ .Content }}
       {{ end }}
   </div></p>
-  <p><a href="{{ .RelPermalink }}">Read more ⟶</a></p>                      
     {{ else }}
     <p>{{ .Content }}</p>
     {{ end }}
