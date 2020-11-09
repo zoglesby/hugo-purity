@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* Import purecss-0.3 */
-@import url(http://yui.yahooapis.com/pure/0.3.0/pure-min.css);
+@import url(pure-min.css-0.3.css);
 /* Dark Theme: dark.css; Light Theme: light.css; */
 @import url(dark.css);
 
