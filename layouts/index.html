@@ -1,0 +1,17 @@
+{{ define "main" }}			
+	<main class="list">
+		{{ if .Site.Params.paginate_home }}
+			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+			{{ range $paginator.Pages }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
+
+			{{ partial "pagination" . }}
+		{{ else }}
+			{{ $list := where .Data.Pages.ByDate.Reverse "Type" "post" }}
+			{{ range $list  }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
+		{{ end }}
+	</main>
+{{ end }}
