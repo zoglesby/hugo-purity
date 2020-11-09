@@ -10,7 +10,7 @@
 		{{ else }}
 			{{ $list := where .Data.Pages.ByDate.Reverse "Type" "post" }}
 			{{ range $list  }}
-				{{ partial "post-item.html" . }}
+				{{ partial "post-item" . }}
 			{{ end }}
 		{{ end }}
 	</main>
