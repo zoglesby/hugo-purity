@@ -2,15 +2,16 @@
 <main>
 	<article>
 {{ if .Title }}
-		<div class="title">
-			<h1 class="title">{{ .Title }}</h1>
-			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+			<h2 class="title">{{ .Title }}</h2>
+			<div class="info">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
 		</div>
 
 		<section class="body">
 			{{ .Content }}
 		</section>
 {{ else }}
+		<div class="info">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+		</div>
 		<section class="body microblog">
 			{{ .Content }}
 		</section>

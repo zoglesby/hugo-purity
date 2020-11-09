@@ -1,5 +1,5 @@
 {{ define "main" }}			
-	<main class="list">
+	<main class="content" role="main">
 		{{ if .Site.Params.paginate_home }}
 			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
 			{{ range $paginator.Pages }}
