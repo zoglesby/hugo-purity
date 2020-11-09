@@ -4,7 +4,6 @@
 {{ if .Title }}
 			<h2 class="title">{{ .Title }}</h2>
 			<div class="info">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
-		</div>
 
 		<section class="body">
 			{{ .Content }}
