@@ -9,7 +9,9 @@
             {{ partial "custom_footer.html" . }}
         </div>
         <div class="pure-u-1 container">
+          <main class="content" role="main">
             {{- block "main" . }}{{- end }}
+          </main>
         </div>
     </div>
   </body>

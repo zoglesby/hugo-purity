@@ -6,7 +6,7 @@
 @import url(pure-min-0.3.css);
 /* Dark Theme: dark.css; Light Theme: light.css; */
 @import url(dark.css);
-
+@import url(light.css);
 
 
 /* ==========================================================================
@@ -19,8 +19,12 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-rendering: optimizeLegibility;
     line-height: 1;
     margin-top: 0;
@@ -29,6 +33,7 @@ h4, h5, h6 {
 a {
     text-decoration: none;
 }
+
 a:hover,
 a:focus {
     text-decoration: underline;
@@ -49,7 +54,7 @@ a:focus {
 
 /* Moved in the import section at the top of the document */
 
-    
+
 /* ==========================================================================
    2.2 Fonts - All the fonts are configured here
    ========================================================================== */
@@ -59,13 +64,14 @@ the `body`. Pure Grids use specific font stacks to ensure the greatest
 OS/browser compatibility.
 */
 body,
-.pure-g [class *= "pure-u"],
-.pure-g-r [class *= "pure-u"] {
+.pure-g [class *="pure-u"],
+.pure-g-r [class *="pure-u"] {
     /* Set you're content font stack here: */
-    font-family: 'Open Sans', Helvetica , sans-serif;
+    font-family: 'Open Sans', Helvetica, sans-serif;
 }
 
-.post-description,.post-content {
+.post-description,
+.post-content {
     font-family: 'Droid Serif', Georgia, serif;
 }
 
@@ -74,7 +80,8 @@ body,
    ========================================================================== */
 
 #layout {
-    padding-left: 25%; /* "left col (nav + list)" width */
+    padding-left: 25%;
+    /* "left col (nav + list)" width */
     position: relative;
 }
 
@@ -86,65 +93,73 @@ body,
     margin-left: -25%;
 }
 
-    .header {
-        margin: 1.5em 2em 0;
-        text-align: right;
-    }
+.header {
+    margin: 1.5em 2em 0;
+    text-align: right;
+}
 
-        .blog-title,
-        .blog-description {
-            margin: 0;
-        }
-        .blog-title {
-            text-transform: uppercase;
-        }
-        .blog-description {
-            font-weight: 300;
-        }
+.blog-title,
+.blog-description {
+    margin: 0;
+}
 
-        .blog-title a:hover {
-            text-decoration: none;
-        }
-        #blog-logo img {
-            margin-bottom: 1em;
-        }
+.blog-title {
+    text-transform: uppercase;
+}
 
-        .nav-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-            .nav-item {
-                display: inline-block;
-                *display: inline;
-                zoom: 1;
-            }
-            .nav-item a {
-                margin-top: 1em;
-            }
-            .nav-item a:hover,
-            .nav-item a:focus {
-                text-decoration: none;
-            }
+.blog-description {
+    font-weight: 300;
+}
 
-        .social-list {
-            margin: 0;
-            margin-top: 1.5em;
-            padding: 0;
-            list-style: none;
-        }
-            .social-item {
-                display: inline-block;
-                *display: inline;
-                zoom: 1;
-            }
+.blog-title a:hover {
+    text-decoration: none;
+}
 
-            .social-item a {
-                margin-top: 1em;
-            }
-            .social-item a:hover {
-                text-decoration: none;
-            }
+#blog-logo img {
+    margin-bottom: 1em;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.nav-item a {
+    margin-top: 1em;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+    text-decoration: none;
+}
+
+.social-list {
+    margin: 0;
+    margin-top: 1.5em;
+    padding: 0;
+    list-style: none;
+}
+
+.social-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.social-item a {
+    margin-top: 1em;
+}
+
+.social-item a:hover {
+    text-decoration: none;
+}
 
 .content-subhead {
     text-transform: uppercase;
@@ -163,106 +178,121 @@ body,
 .post {
     padding-bottom: 2em;
 }
-    .back{
-        margin-top: -2%;   
-        padding-bottom: 2em; 
-        font-size: 0.8em;
 
-    }
-    .post-title {
-        font-size: 2em;
-        margin-bottom: 0.2em;
-    }
-    .big {
-        font-size: 2.5em;
-    }
-    .post-avatar {
-        border-radius: 50px;
-        float: right;
-        margin-left: 1em;
-    }
-    .post-description {
-        line-height: 1.2em;
-    }
-    .post-content {
-        font-size: 1.1em;
-        line-height: 1.3em;
-    }
-    .post-content p {
-        margin: 1.2em 0;
-    }
-    .post-meta {
-        font-size: 90%;
-        margin: 0;
-    }
-    .post-images {
-        margin: 1em 0;
-    }
-    .post-image-meta {
-        margin-top: -3.5em;
-        margin-left: 1em;
-    }
+.back {
+    margin-top: -2%;
+    padding-bottom: 2em;
+    font-size: 0.8em;
 
-    .post-comments {
-        margin-top: 2em;
-        padding-top: 1.2em;
-    }
+}
 
-    .post-share-box {
-        display: block;
-        float: right;
-        text-align: center;
-        margin: 0;
-        margin-left: 1em;
-        margin-right: 0.5em;
-        margin-bottom: 1em;
-        padding: 1em;
-        padding-top:0.5em;
-        padding-bottom:0.5em;
-        border-radius: 3px;
-    }
-        .share h3 {
-            margin: 0;
-            margin-bottom: 0.8em;
-            font-size: 80%;
-        }
+.post-title {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
 
-        .share {
-            /*font-size: 120%;*/
-        }
+.big {
+    font-size: 2.5em;
+}
 
-        .share a {
-            margin-left: 2px;
-            margin-right: 2px;
-        }
-        .share a:hover {
-            text-decoration: none;
-        }
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+
+.post-description {
+    line-height: 1.2em;
+}
+
+.post-content {
+    font-size: 1.1em;
+    line-height: 1.3em;
+}
+
+.post-content p {
+    margin: 1.2em 0;
+}
+
+.post-meta {
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-images {
+    margin: 1em 0;
+}
+
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+}
+
+.post-comments {
+    margin-top: 2em;
+    padding-top: 1.2em;
+}
+
+.post-share-box {
+    display: block;
+    float: right;
+    text-align: center;
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 3px;
+}
+
+.share h3 {
+    margin: 0;
+    margin-bottom: 0.8em;
+    font-size: 80%;
+}
+
+.share {
+    /*font-size: 120%;*/
+}
+
+.share a {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.share a:hover {
+    text-decoration: none;
+}
 
 
 .pagination {
     margin-bottom: 10px;
     font-size: 80%;
-    white-space:nowrap;
+    white-space: nowrap;
 }
-    .page-number {
-        width:40%;
-        display: inline-block;
-        text-align: center;
-    }
-    .older-posts {
-        display: inline-block;
-        width:30%;
-        padding-left:5px;
-        text-align: right;
-        padding-right: 5px;
-    }
-    .newer-posts {
-        display: inline-block;
-        width: 30%;
-        padding-right: 5px;
-        text-align: left;
-    }
+
+.page-number {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+
+.older-posts {
+    display: inline-block;
+    width: 30%;
+    padding-left: 5px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.newer-posts {
+    display: inline-block;
+    width: 30%;
+    padding-right: 5px;
+    text-align: left;
+}
 
 .footer {
     text-align: right;
@@ -272,9 +302,10 @@ body,
     position: fixed;
     bottom: 0;
 }
-    .footer section {
-        font-size: 70%;
-    }
+
+.footer section {
+    font-size: 70%;
+}
 
 
 /* ==========================================================================
@@ -305,18 +336,23 @@ blockquote p {
 
 blockquote small {
     display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;;
-    font-size:0.9em;
+    margin: 0.8em 0 0.8em 1.5em;
+    ;
+    font-size: 0.9em;
     color: rgba(142, 142, 214, 0.5);
 }
 
-blockquote small:before { content: '\2014 \00A0'; }
-
-blockquote cite {
-    font-weight:bold;
+blockquote small:before {
+    content: '\2014 \00A0';
 }
 
-blockquote cite a { font-weight: normal; }
+blockquote cite {
+    font-weight: bold;
+}
+
+blockquote cite a {
+    font-weight: normal;
+}
 
 code {
     padding: 1px 3px;
@@ -378,18 +414,23 @@ blockquote p {
 
 blockquote small {
     display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;;
-    font-size:0.9em;
+    margin: 0.8em 0 0.8em 1.5em;
+    ;
+    font-size: 0.9em;
     color: rgba(142, 142, 214, 0.5);
 }
 
-blockquote small:before { content: '\2014 \00A0'; }
-
-blockquote cite {
-    font-weight:bold;
+blockquote small:before {
+    content: '\2014 \00A0';
 }
 
-blockquote cite a { font-weight: normal; }
+blockquote cite {
+    font-weight: bold;
+}
+
+blockquote cite a {
+    font-weight: normal;
+}
 
 code {
     padding: 1px 3px;
@@ -455,17 +496,18 @@ pre code {
     }
 
     .post-share-box {
-        width:100%;
+        width: 100%;
         text-align: center;
-        margin:0.7em;
-        margin-top:-5px;
+        margin: 0.7em;
+        margin-top: -5px;
         padding: 6px 2px 2px;
     }
-        .share h3 {
-            display: inline;
-            vertical-align: top;
-            font-size: 90%;
-        }
+
+    .share h3 {
+        display: inline;
+        vertical-align: top;
+        font-size: 90%;
+    }
 }
 
 div.info {

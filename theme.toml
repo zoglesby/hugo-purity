@@ -1,4 +1,23 @@
-baseURL = "http://zach.oglesby.co/"
-languageCode = "en-us"
-title = "My New Hugo Site"
-theme = "hugo-purity"
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Hugo Purity"
+license = "MIT"
+licenselink = "https://github.com/janraasch/hugo-bearblog/blob/master/LICENSE"
+description = "A Hugo theme based on »Bear Blog«. Free, no-nonsense, super-fast blogging. »Bear Blog« now includes a dark color scheme to support dark mode!"
+homepage = "https://github.com/zoglesby/hugo-purity"
+demosite = "https://zoglesby-test.micro.blog"
+tags = ["blog", "responsive", "minimalist", "mobile", "dark mode"]
+features = []
+min_version = "0.73.0"
+
+
+[author]
+  name = "Zach Oglesby"
+  homepage = "https://zach.oglesby.co"
+
+# If porting an existing theme
+[original]
+  name = "Purity"
+  homepage = "https://github.com/mseri/purity"
+  repo = "https://github.com/mseri/purity"
