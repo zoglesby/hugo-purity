@@ -1,8 +1,8 @@
 {
 	"version": "1.0.0",
 	"title": "Purity",
-	"description": "Theme based on Purity theme for Ghost"
-    "fields": [
+	"description": "Theme based on Purity theme for Ghost",
+	"fields": [
 		{
 			"field": "params.twitter",
 			"label": "Twitter",
@@ -53,5 +53,5 @@
 			"label": "Display full post content on Homepage",
 			"type": "boolean"
 		}
-	]	
+	]
 }
