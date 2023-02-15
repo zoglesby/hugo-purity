@@ -8,10 +8,14 @@
 
     <nav class="nav">
 
-{{ $url := .RelPermalink }}<!---->
-  {{ $mb := "microdotblog" }}<!---->
-  {{ $lkd := "linkedin" }}<!---->
-  {{ $mstdn := "mastodon" }}<!---->
+        {{ $url := .RelPermalink }}
+        <!---->
+        {{ $mb := "microdotblog" }}
+        <!---->
+        {{ $lkd := "linkedin" }}
+        <!---->
+        {{ $mstdn := "mastodon" }}
+        <!---->
 
         | <a href='{{ "/" | relURL }}'>Home</a> |
         {{ range .Site.Menus.main }}
@@ -26,14 +30,13 @@
             {{ range . }}
             {{ $social_value := site.Params.Get . }}
             {{if ne $social_value "" }}
-            <li class="social-item"><a rel="me" class="fab fa-{{ . }}" {{if eq . $mstdn }}
-                href="{{ $social_value }}" {{ else }}
-                href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{ if eq . $lkd }}/in{{end}}{{end}}/{{ $social_value }}"
-                {{ end }} target="_blank"></a></li>
+            <li class="social-item"><a rel="me" class="fab fa-{{ . }}" {{if eq . $mstdn }} href="{{ $social_value }}" {{
+                    else }}
+                    href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{ if eq . $lkd }}/in{{end}}{{end}}/{{ $social_value }}"
+                    {{ end }} target="_blank"></a></li>
             {{ end }}
         </ul>
         {{ end }}
-    </nav>
-    {{ end }}
+        {{ end }}
     </nav>
 </header>
