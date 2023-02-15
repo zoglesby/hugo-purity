@@ -1,17 +1,26 @@
-{{ define "main" }}			
-	<main class="content" role="main">
-		{{ if .Site.Params.paginate_home }}
-			{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
-			{{ range $paginator.Pages }}
-				{{ partial "post-item.html" . }}
-			{{ end }}
+{{ define "main" }}
 
-			{{ partial "pagination" . }}
-		{{ else }}
-			{{ $list := where .Data.Pages.ByDate.Reverse "Type" "post" }}
-			{{ range $list  }}
-				{{ partial "post-item" . }}
-			{{ end }}
+<div class="h-feed">
+	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+	{{ range $paginator.Pages }}
+	<div class="h-entry">
+		{{ if .Title }}
+		<h1 class="">
+			<a href="{{ .Permalink }}">
+				<div class="">{{ .Title }}</div>
+			</a>
+		</h1>
 		{{ end }}
-	</main>
+		<span class="e-content">{{ .Content }}</span>
+
+		<p>
+			<a href="{{ .Permalink }}" class="u-url">
+				<i><time class="dt-published" datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}">{{ .Date.Format
+						"2 Jan, 2006" }}</time></i>
+			</a>
+		</p>
+	</div>
+	{{ end }}
+</div>
+
 {{ end }}
