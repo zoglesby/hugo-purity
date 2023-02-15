@@ -4,6 +4,11 @@
 	"description": "Theme based on Purity theme for Ghost",
 	"fields": [
 		{
+			"field": "params.subtitle",
+			"label": "Subtitle",
+			"placeholder": "Site subtitle, used in navbar"
+		},
+		{
 			"field": "params.twitter",
 			"label": "Twitter",
 			"placeholder": "Your Twitter username"
