@@ -7,7 +7,13 @@
     <br />
 
     <nav class="nav">
-        | <a href='{{ "/" | relURL }}''>Home</a> |
+
+{{ $url := .RelPermalink }}<!---->
+  {{ $mb := "microdotblog" }}<!---->
+  {{ $lkd := "linkedin" }}<!---->
+  {{ $mstdn := "mastodon" }}<!---->
+
+        | <a href='{{ "/" | relURL }}'>Home</a> |
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}">{{ .Name }}</a> |
         {{ end }}
@@ -15,24 +21,15 @@
         <a href=' {{ "/blog" | relURL }}'>Blog</a> |
         {{ end }}
 
-        <!-- <li class="social-item"><a class="fab fa-twitter" href="http://www.twitter.com/zmoglesby" target="_blank"></a>
-        </li> 
-        <li class="social-item"><a class="fab fa-linkedin" href="https://www.linkedin.com/in/zach-oglesby-78679982/"
-                target="_blank" rel="publisher"></a>
-        </li> 
-        <li class="social-item"><a class="fab fa-github" href="http://www.github.com/zoglesby" target="_blank"></a>
-        </li> 
-        <li class="social-item"><a class="fab fa-microblog" href="https://micro.blog/zoglesby" target="_blank"></a>
-        </li> -->
         {{ with $.Scratch.Get "social-list" }}
         <ul class="social-list">
             {{ range . }}
             {{ $social_value := site.Params.Get . }}
             {{if ne $social_value "" }}
-            <li class="social-item"></li><a rel="me" class="{{ . }}" class=" fab fa-url(./{{ . }})" {{if eq . $mstdn }}
+            <li class="social-item"><a rel="me" class="fab fa-{{ . }}" {{if eq . $mstdn }}
                 href="{{ $social_value }}" {{ else }}
                 href="https://{{ if eq . $mb }}micro.blog{{else}}{{ . }}.com{{ if eq . $lkd }}/in{{end}}{{end}}/{{ $social_value }}"
-                {{ end }} target="_blank"></a>li>
+                {{ end }} target="_blank"></a></li>
             {{ end }}
         </ul>
         {{ end }}

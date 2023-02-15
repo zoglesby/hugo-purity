@@ -1,18 +1,34 @@
 <!DOCTYPE html>
+{{ $.Scratch.Delete "social-list" }}
+<!---->
+{{ $social := slice "twitter" "github" "instagram" "microdotblog" "mastodon" "linkedin" "buymeacoffee"}}
+<!---->
+{{ range $social }}
+<!---->
+{{ if isset site.Params . }}
+<!---->
+{{ $.Scratch.Add "social-list" (slice .) }}
+<!---->
+{{ end }}
+<!---->
+{{ end }}
+<!---->
 <html>
-  {{ partial "head.html" . }}
-  <body itemtype="http://schema.org/WebPage" class="home-template">
-    <div class="pure-g-r" id="layout">
-        <div class="sidebar pure-u">
-            {{ partial "header.html" . }}
-            {{ partial "footer.html" . }}
-            {{ partial "custom_footer.html" . }}
-        </div>
-        <div class="pure-u-1 container">
-          <main class="content" role="main">
-            {{- block "main" . }}{{- end }}
-          </main>
-        </div>
+{{ partial "head.html" . }}
+
+<body itemtype="http://schema.org/WebPage" class="home-template">
+  <div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+      {{ partial "header.html" . }}
+      {{ partial "footer.html" . }}
+      {{ partial "custom_footer.html" . }}
     </div>
-  </body>
+    <div class="pure-u-1 container">
+      <main class="content" role="main">
+        {{- block "main" . }}{{- end }}
+      </main>
+    </div>
+  </div>
+</body>
+
 </html>
