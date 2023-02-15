@@ -2,22 +2,58 @@
     <hgroup>
         <h1 itemprop="name" class="blog-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
         <h2 itemprop="description" class="blog-description">Subtitle</h2>
-    </hgroup><br /><br />
-    
-    <a href="/index.html">Home</a> |
-    <a href="/about.html">About</a> |
-    <a href="/archive.html">Archive</a>
-    <br /><br />
-    
+    </hgroup>
+
+    <br />
+
     <nav class="nav">
-    <ul class="social-list">
-        
-        <li class="social-item"><a class="fab fa-twitter" href="http://www.twitter.com/zmoglesby" target="_blank"></a></li> 
-        <li class="social-item"><a class="fab fa-linkedin" href="https://www.linkedin.com/in/zach-oglesby-78679982/" target="_blank" rel="publisher"></a></li> 
-        <li class="social-item"><a class="fab fa-github" href="http://www.github.com/zoglesby" target="_blank"></a></li> 
-        <li class="social-item"><a class="fab fa-microblog" href="https://micro.blog/zoglesby" target="_blank"></a></li>
-        <!-- <li class="social-item"><a class="subscribe icon-feed" href="http://zach.oglesby.co/rss/" target="_blank"></a></li> -->
-    </ul>
+        <header class="header">
+            <hgroup>
+                <h1 itemprop="name" class="blog-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+                <h2 itemprop="description" class="blog-description">Subtitle</h2>
+            </hgroup>
+
+            <br />
+
+            <nav class="nav">
+
+                <a href="{{ " /" | relURL }}">Home</a>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+                {{ with .Site.GetPage "/blog" }}
+                <a href="{{ " /blog" | relURL }}">Blog</a>
+                {{ end }}
+
+                <ul class="social-list">
+
+                    <li class="social-item"><a class="fab fa-twitter" href="http://www.twitter.com/zmoglesby"
+                            target="_blank"></a></li> 
+                    <li class="social-item"><a class="fab fa-linkedin"
+                            href="https://www.linkedin.com/in/zach-oglesby-78679982/" target="_blank"
+                            rel="publisher"></a></li> 
+                    <li class="social-item"><a class="fab fa-github" href="http://www.github.com/zoglesby"
+                            target="_blank"></a></li> 
+                    <li class="social-item"><a class="fab fa-microblog" href="https://micro.blog/zoglesby"
+                            target="_blank"></a></li>
+                    <!-- <li class="social-item"><a class="subscribe icon-feed" href="http://zach.oglesby.co/rss/" target="_blank"></a></li> -->
+                </ul>
+            </nav>
+
+        </header>
+
+        <ul class="social-list">
+
+            <li class="social-item"><a class="fab fa-twitter" href="http://www.twitter.com/zmoglesby"
+                    target="_blank"></a></li> 
+            <li class="social-item"><a class="fab fa-linkedin" href="https://www.linkedin.com/in/zach-oglesby-78679982/"
+                    target="_blank" rel="publisher"></a></li> 
+            <li class="social-item"><a class="fab fa-github" href="http://www.github.com/zoglesby" target="_blank"></a>
+            </li> 
+            <li class="social-item"><a class="fab fa-microblog" href="https://micro.blog/zoglesby" target="_blank"></a>
+            </li>
+            <!-- <li class="social-item"><a class="subscribe icon-feed" href="http://zach.oglesby.co/rss/" target="_blank"></a></li> -->
+        </ul>
     </nav>
 
 </header>
