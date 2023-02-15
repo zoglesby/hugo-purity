@@ -29,6 +29,8 @@
       </main>
     </div>
   </div>
+  {{ range .Site.Params.plugins_js }}
+  <script src="{{ . }}"></script>
+{{ end }}
 </body>
-
 </html>
