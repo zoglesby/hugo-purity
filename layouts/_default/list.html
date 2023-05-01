@@ -1,7 +1,7 @@
 {{ define "main" }}
 <ul class="posts">
-	{{- range .Data.Pages -}}
-	{{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
+	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") (index .Site.Params "archive-paginate" | default 25) }}
+	{{ range $paginator.Pages  }}
 	<li class="post">
 		{{ if .Title }}
 		<a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft
